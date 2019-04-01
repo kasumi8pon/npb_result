@@ -1,6 +1,6 @@
 # NpbResult
 
-Get NPB game result
+get NPB game result
 
 ## Installation
 
@@ -39,7 +39,8 @@ NpbResult.list
       {:home_team=>"巨人", :home_score=>6, :away_team=>"広島", :away_score=>3, :status=>"結果"},
       {:home_team=>"ヤクルト", :home_score=>2, :away_team=>"阪神", :away_score=>1, :status=>"結果"},
       {:home_team=>"西武", :home_score=>1, :away_team=>"ソフトバンク", :away_score=>3, :status=>"結果"},
-      {:home_team=>"オリックス", :home_score=>1, :away_team=>"日本ハム", :away_score=>3, :status=>"結果"}, {:home_team=>"楽天", :home_score=>9, :away_team=>"ロッテ", :away_score=>4, :status=>"結果"}
+      {:home_team=>"オリックス", :home_score=>1, :away_team=>"日本ハム", :away_score=>3, :status=>"結果"}, 
+      {:home_team=>"楽天", :home_score=>9, :away_team=>"ロッテ", :away_score=>4, :status=>"結果"}
     ]
 
 NpbResult.list(date: Date.today, team: "オリックス")
