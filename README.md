@@ -1,8 +1,6 @@
 # NpbResult
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/npb_result`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Get NPB game result
 
 ## Installation
 
@@ -22,7 +20,32 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+$ npb_result
+> 【結果】ＤｅＮＡ (3) - (2) 中日
+  【結果】広島 (3) - (6) 巨人
+  【結果】阪神 (1) - (2) ヤクルト
+  【結果】ソフトバンク (3) - (1) 西武
+  【結果】日本ハム (3) - (1) オリックス
+  【結果】ロッテ (4) - (9) 楽天
+```
+
+or
+
+```
+NpbResult.list
+#=> [
+      {:home_team=>"中日", :home_score=>2, :away_team=>"ＤｅＮＡ", :away_score=>3, :status=>"結果"},
+      {:home_team=>"巨人", :home_score=>6, :away_team=>"広島", :away_score=>3, :status=>"結果"},
+      {:home_team=>"ヤクルト", :home_score=>2, :away_team=>"阪神", :away_score=>1, :status=>"結果"},
+      {:home_team=>"西武", :home_score=>1, :away_team=>"ソフトバンク", :away_score=>3, :status=>"結果"},
+      {:home_team=>"オリックス", :home_score=>1, :away_team=>"日本ハム", :away_score=>3, :status=>"結果"}, {:home_team=>"楽天", :home_score=>9, :away_team=>"ロッテ", :away_score=>4, :status=>"結果"}
+    ]
+
+NpbResult.list(date: Date.today, team: "オリックス")
+#=> [{:home_team=>"オリックス", :home_score=>1, :away_team=>"日本ハム", :away_score=>3, :status=>"結果"}]
+```
+
 
 ## Development
 

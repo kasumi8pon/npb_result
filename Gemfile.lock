@@ -32,7 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.17)
-  irb
+  irb (~> 1.0)
   npb_result!
   rake (~> 10.0)
   rspec (~> 3.0)
