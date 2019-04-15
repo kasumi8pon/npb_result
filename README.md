@@ -33,18 +33,15 @@ $ npb_result
 or
 
 ```
-NpbResult.list
-#=> [
-      {:home_team=>"中日", :home_score=>2, :away_team=>"ＤｅＮＡ", :away_score=>3, :status=>"結果"},
-      {:home_team=>"巨人", :home_score=>6, :away_team=>"広島", :away_score=>3, :status=>"結果"},
-      {:home_team=>"ヤクルト", :home_score=>2, :away_team=>"阪神", :away_score=>1, :status=>"結果"},
-      {:home_team=>"西武", :home_score=>1, :away_team=>"ソフトバンク", :away_score=>3, :status=>"結果"},
-      {:home_team=>"オリックス", :home_score=>1, :away_team=>"日本ハム", :away_score=>3, :status=>"結果"}, 
-      {:home_team=>"楽天", :home_score=>9, :away_team=>"ロッテ", :away_score=>4, :status=>"結果"}
-    ]
-
-NpbResult.list(date: Date.today, team: "オリックス")
-#=> [{:home_team=>"オリックス", :home_score=>1, :away_team=>"日本ハム", :away_score=>3, :status=>"結果"}]
+date = Date.new(2019, 4, 7)
+NpbResult::Results.new(date: date).select_team("オリックス")
+#=> #<NpbResult::Game:0x00007f9bf498bec0 
+     @away_team="楽天",
+     @away_score=5,
+     @home_team="オリックス",
+     @home_score=5,
+     @status="結果",
+     @start_time=2019-04-07 13:00:00 +0900>
 ```
 
 

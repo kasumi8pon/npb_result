@@ -2,4 +2,4 @@
 
 require 'npb_result'
 
-puts NpbResult.display
+puts NpbResult::Results.new.display
