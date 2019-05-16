@@ -18,9 +18,11 @@ module NpbResult
       @results = []
 
       @size.times do |i|
-        @results << Game.new(away_team[i], away_score[i],
-                             home_team[i], home_score[i],
-                             status[i], start_time[i])
+        @results << Game.new(
+          away_team[i], away_score[i],
+          home_team[i], home_score[i],
+          status[i], start_time[i]
+        )
       end
     end
 
